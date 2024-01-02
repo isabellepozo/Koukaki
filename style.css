@@ -1,0 +1,486 @@
+@charset "UTF-8";
+/*!
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short Child Theme
+ Theme URI: https://www.koukaki.local
+ Author: Votre nom
+ Author URI: Votre site web
+ Template: foce-child
+ Description: Thème enfant pour Fleurs d'orangers et chats errants - Oscars Short
+ Version: 0.1
+*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeIn {
+  animation: fadeIn 1.6s ease-out 0.8s both;
+}
+
+.fadeDown {
+  animation: fadeDown 1.6s ease-out 0.8s both;
+}
+
+@keyframes rotateFlower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#colophon.oscars::before {
+  content: url("./assets/images/Sunflower.png");
+  display: none;
+  animation: rotateFlower 10s linear infinite;
+}
+
+#colophon.oscars::after {
+  content: url("./assets/images/orchid.png");
+  display: none;
+  animation: rotateFlower 10s linear infinite;
+}
+
+.site-footer ul::after {
+  animation: rotateFlower 10s linear infinite;
+}
+
+#studio h2::after {
+  animation: rotateFlower 10s linear infinite;
+}
+
+#studio h2::before {
+  animation: rotateFlower 10s linear infinite;
+}
+
+.story__article::after {
+  animation: rotateFlower 10s linear infinite;
+}
+
+.story h2::after {
+  animation: rotateFlower 10s linear infinite;
+}
+
+.animationTitre {
+  opacity: 1;
+  transition: 2s ease-in;
+}
+
+h2, h3 {
+  opacity: 0;
+}
+
+.oscars {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6em;
+}
+.oscars h3.background-image {
+  background-image: url("http://localhost/koukaki/wp-content/themes/foce-child/assets/images/nuage_oscars.png");
+  background-repeat: no-repeat;
+  background-size: 762px 268px;
+  margin: 0;
+  background-position: center;
+  text-align: left;
+  font-size: 42px;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: -0.84px;
+  padding: 3em 2em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 815px;
+  position: relative;
+}
+
+.left-image {
+  position: absolute;
+  left: 6em;
+  top: -7em;
+}
+
+.right-image {
+  position: absolute;
+  right: -4em;
+  bottom: 26em;
+}
+
+.left-image img,
+.right-image img {
+  animation: rotateFlower 10s linear infinite;
+}
+
+@media screen and (max-width: 1015px) {
+  .oscars {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 765px) {
+  .oscars h3.background-image {
+    font-size: 22px;
+    line-height: normal;
+    font-weight: 400;
+    width: auto;
+    text-align: center;
+    background-size: 600px 200px;
+  }
+}
+@media (max-width: 768px) {
+  .video-banner {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .banner {
+    position: relative;
+  }
+  .video-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  10% {
+    transform: translate3d(-6px, -7px, 0);
+  }
+  20% {
+    transform: translate3d(12px, 14px, 0);
+  }
+  30% {
+    transform: translate3d(-4px, -5px, 0);
+  }
+  40% {
+    transform: translate3d(5px, 8px, 0);
+  }
+  50% {
+    transform: translate3d(-12px, -13px, 0);
+  }
+  60% {
+    transform: translate3d(5px, -8px, 0);
+  }
+  70% {
+    transform: translate3d(-12px, 10px, 0);
+  }
+  80% {
+    transform: translate3d(9px, 8px, 0);
+  }
+  90% {
+    transform: translate3d(-10px, -10px, 0);
+  }
+}
+.logo-img {
+  animation: float 8s 3s infinite ease-in-out;
+  position: sticky;
+  top: 0;
+  padding-bottom: 50px;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 420px;
+  height: 420px;
+  text-align: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.cloud-title {
+  position: relative;
+  top: 50px;
+}
+
+.cloud-title h3 {
+  color: #fff;
+  padding: 50px;
+  margin-left: 450px;
+  background-image: url("./assets/images/orange_characters_bg.png");
+  text-align: left;
+  background-repeat: no-repeat;
+  background-position: left -10px center;
+}
+
+@media (max-width: 1120px) {
+  .cloud-title h3 {
+    text-align: center;
+    margin-left: 0;
+    background-position: center;
+  }
+  .swiper-slide {
+    width: 300px;
+    height: 300px;
+  }
+}
+.story #place {
+  background-image: url("./assets/images/Studio_Koukaki-image_place.png");
+}
+
+#place {
+  position: relative;
+}
+
+.nuages-groupe {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  opacity: 0.8;
+  filter: blur(12px);
+  top: 80px;
+  right: 540px;
+}
+
+.big_cloud {
+  margin-right: 20px;
+}
+
+.little_cloud {
+  margin-top: 180px;
+  padding-right: 120px;
+}
+
+.main-navigation ul .site-title {
+  display: block;
+}
+
+.toggle {
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  cursor: pointer;
+  left: 90%;
+  padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .main-navigation ul {
+    display: flex !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-navigation ul .site-title {
+    font-size: 16px;
+  }
+}
+.main-navigation.burgerMenu {
+  height: 80px;
+}
+
+.main-navigation.burger-menu ul {
+  display: flex;
+}
+
+body.burger {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+body.burger.open {
+  max-width: none;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  animation: fadeIn 1.4s ease-out 0.4s both;
+}
+
+.menu-ouvert {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFF5E9;
+  color: black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 0.5s ease;
+}
+
+.menu-ouvert ul {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.menu-ouvert li {
+  font-size: 44px;
+  line-height: 64px;
+}
+
+.menu-ouvert ul li {
+  margin-bottom: 1rem;
+}
+
+.menu-ouvert li a:hover {
+  color: black;
+  text-shadow: 0px 0px 14px #FF5C00;
+}
+
+.ouvrir {
+  display: block;
+}
+
+.fermer {
+  display: none;
+}
+
+.open .ouvrir {
+  display: none;
+}
+
+.open .fermer {
+  display: block;
+}
+
+.open .menu-ouvert {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 0.5s ease;
+}
+
+.logo-menu {
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo-menu img {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0px 0px 26.0937px rgba(255, 92, 0, 0.6));
+}
+
+.liste-burger li {
+  margin-top: 8px;
+}
+
+.burger-menu-footer-link a {
+  font-size: 14px;
+}
+
+.images-menu img {
+  position: absolute;
+}
+
+.orchidee {
+  top: 5em;
+  left: -4em;
+  animation: rotateFlower 10s linear infinite;
+}
+
+.images-menu img.orchidee {
+  width: 10%;
+  height: auto;
+}
+
+.fleur {
+  top: 22em;
+  left: 10em;
+  animation: rotateFlower 10s linear infinite;
+}
+
+.images-menu img.fleur {
+  width: 5%;
+  height: auto;
+}
+
+.marguerite {
+  top: 3em;
+  right: 15em;
+  animation: rotateFlower 10s linear infinite;
+}
+
+.images-menu img.marguerite {
+  width: 13%;
+  height: auto;
+}
+
+.hibiscus {
+  right: -14em;
+  animation: rotateFlower 10s linear infinite;
+  bottom: -8em;
+}
+
+.images-menu img.hibiscus {
+  width: 25%;
+  height: auto;
+  filter: blur(4px);
+}
+
+.fleurMauve {
+  right: -3em;
+  animation: rotateFlower 10s linear infinite;
+  top: 22em;
+}
+
+.images-menu img.fleurMauve {
+  width: 5%;
+  height: auto;
+}
+
+.chat-bleu {
+  top: 8em;
+  left: 16em;
+  animation: float 8s 3s infinite ease-in-out;
+}
+
+.images-menu img.chat-bleu {
+  width: 10%;
+  height: auto;
+}
+
+.chat-orange {
+  top: 34em;
+  left: 5em;
+  animation: float 10s 2s infinite ease-in-out;
+}
+
+.images-menu img.chat-orange {
+  width: 8%;
+  height: auto;
+}
+
+.chat-gris {
+  top: 24em;
+  right: 16em;
+  animation: float 12s 4s infinite ease-in-out;
+}
+
+.images-menu img.chat-gris {
+  width: 8%;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */

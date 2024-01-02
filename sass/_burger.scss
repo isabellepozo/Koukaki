@@ -1,0 +1,227 @@
+// STYLE ET GESTION DU MENU BURGER
+
+    .main-navigation ul .site-title {
+    display: block;
+    }
+    
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        position: absolute;
+        cursor: pointer;
+        left: 90%;
+        padding : 0;
+    }
+
+    @media screen and (max-width: 700px) {
+        .main-navigation ul {
+            display: flex !important; 
+        }   
+    }
+
+    @media screen and (max-width: 600px) {
+        .main-navigation ul .site-title {
+            font-size: 16px; 
+        }
+    }
+
+
+    // Styles par défaut lorsque le menu est fermé 
+        .main-navigation.burgerMenu {
+            height: 80px ;
+        }
+        
+        .main-navigation.burger-menu ul {
+            display: flex;
+        }
+
+        body.burger {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+
+
+    // Styles par défaut lorsque le menu est ouvert
+        body.burger.open {    
+            max-width: none;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            animation: fadeIn 1.4s ease-out 0.4s both;
+        }
+        
+        .menu-ouvert {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: #FFF5E9;
+            color: black;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease, visibility 0.5s ease; 
+        }
+
+        .menu-ouvert ul {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .menu-ouvert li {
+            font-size: 44px;
+            line-height: 64px;   
+        }
+
+        .menu-ouvert ul li {
+            margin-bottom: 1rem; 
+        }
+
+        .menu-ouvert li a:hover {
+            color: black;
+            text-shadow: 0px 0px 14px #FF5C00;
+        }
+
+
+    // Gestion de l'ouverture et fermeture du menu    
+        .ouvrir {
+            display: block;
+        }
+
+        .fermer {
+            display: none;
+        }
+
+        .open .ouvrir {
+            display: none;
+        }
+
+        .open .fermer {
+            display: block;
+        }
+
+        .open .menu-ouvert {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 1s ease, visibility 0.5s ease; 
+        }
+
+
+// GESTION DU STYLE ET ANIMATION IMAGES
+    
+    // Logo du menu burger 
+        .logo-menu {
+            text-align: center; 
+            padding: 2rem;
+        }
+
+        .logo-menu img {
+            width: 150px; 
+            height: auto; 
+            filter: drop-shadow(0px 0px 26.0937px rgba(255, 92, 0, 0.6));
+        }
+
+        // Espacement entre le titre et les éléments de la liste-burger
+        .liste-burger li {
+            margin-top: 8px; 
+        }
+
+    // Taille du texte footer
+    .burger-menu-footer-link a{
+        font-size: 14px;
+    }
+
+    // Position et animation des images
+        .images-menu img {
+            position: absolute;
+        }
+
+        .orchidee {
+            top: 5em; 
+            left: -4em;
+            animation: rotateFlower 10s linear infinite;
+        }
+
+        .images-menu img.orchidee {
+            width: 10%; 
+            height: auto; 
+        } 
+
+        .fleur {
+            top: 22em; 
+            left: 10em;
+            animation: rotateFlower 10s linear infinite;
+        }
+
+        .images-menu img.fleur {
+            width: 5%; 
+            height: auto; 
+        } 
+    
+        .marguerite {
+            top: 3em; 
+            right: 15em;   
+            animation: rotateFlower 10s linear infinite;
+        }
+
+        .images-menu img.marguerite {
+            width: 13%; 
+            height: auto; 
+        } 
+
+        .hibiscus {  
+            right: -14em;
+            animation: rotateFlower 10s linear infinite;
+            bottom: -8em ;
+        }
+
+        .images-menu img.hibiscus {
+            width: 25%; 
+            height: auto; 
+            filter: blur(4px);
+        } 
+
+        .fleurMauve {  
+            right: -3em;
+            animation: rotateFlower 10s linear infinite;
+            top: 22em ;
+        }
+
+        .images-menu img.fleurMauve {
+            width: 5%; 
+            height: auto; 
+        } 
+
+        .chat-bleu {
+            top: 8em; 
+            left: 16em;
+            animation: float 8s 3s infinite ease-in-out;
+        }
+
+        .images-menu img.chat-bleu {
+            width: 10%; 
+            height: auto; 
+        } 
+
+        .chat-orange {
+            top: 34em; 
+            left: 5em;
+            animation: float 10s 2s infinite ease-in-out;
+        }
+
+        .images-menu img.chat-orange {
+            width: 8%; 
+            height: auto; 
+        } 
+
+        .chat-gris {
+            top: 24em; 
+            right: 16em;
+            animation: float 12s 4s infinite ease-in-out;
+        }
+
+        .images-menu img.chat-gris {
+            width: 8%; 
+            height: auto; 
+        } 

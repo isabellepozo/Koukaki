@@ -1,0 +1,37 @@
+// Nouvelle image de fond
+.story #place{
+    background-image: url('./assets/images/Studio_Koukaki-image_place.png');
+}
+
+
+// Position des nuages
+#place {
+    position: relative;
+}
+
+.nuages-groupe {
+    position: absolute;
+    display: flex; 
+    justify-content: flex-end;
+    align-items: flex-start;
+    opacity: 0.8; 
+    filter: blur(12px); 
+    top: 80px;
+    right: 540px;   
+ }
+
+.big_cloud {
+    margin-right: 20px;
+}
+
+.little_cloud {
+    margin-top: 180px;
+    padding-right: 120px;
+   
+}
+
+
+
+
+
+

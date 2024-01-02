@@ -1,0 +1,103 @@
+// Définir les keyframes pour l'animation fadeIn
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Définir les keyframes pour l'animation fadeDown
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Appliquer l'animation fadeIn et fadeDown aux sections 
+.fadeIn {
+    animation: fadeIn 1.6s ease-out 0.8s both; 
+}
+
+// Appliquer l'animation fadeDown aux sections
+.fadeDown {
+    animation: fadeDown 1.6s ease-out 0.8s both; 
+}
+
+
+// Définir les keyframes pour la rotation des fleurs
+@keyframes rotateFlower {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// Supprimer les fleurs de la section Footer
+// Préparer la rotation des fleurs lors de la suppression de la section Oscars
+#colophon.oscars::before {
+    content: url("./assets/images/Sunflower.png");
+    display: none;
+    animation: rotateFlower 10s linear infinite;  
+}
+
+#colophon.oscars::after {
+    content: url("./assets/images/orchid.png");
+    display: none;
+    animation: rotateFlower 10s linear infinite;
+}
+
+.site-footer ul::after{
+    animation: rotateFlower 10s linear infinite;
+}
+
+// Rotation des autres fleurs de la page web
+#studio h2::after {
+    animation: rotateFlower 10s linear infinite;
+}
+
+#studio h2::before {
+    animation: rotateFlower 10s linear infinite;
+}
+
+.story__article::after {
+    animation: rotateFlower 10s linear infinite;
+}
+
+.story h2::after {
+    animation: rotateFlower 10s linear infinite;
+}
+
+// Animation des titres
+.animationTitre {
+    opacity: 1;
+    transition: 2s  ease-in;
+}
+
+h2, h3 {
+    opacity: 0;
+}
+
+
+   
+
+
+
+
+
+
+
+
+
+
+

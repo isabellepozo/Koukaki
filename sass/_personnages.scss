@@ -1,0 +1,57 @@
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+.swiper-slide {
+    background-position:center;
+    background-size: cover;
+    width: 420px;
+    height: 420px;
+    text-align: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.cloud-title {
+    position: relative;
+    top: 50px
+}
+
+.cloud-title h3 {
+    color: #fff;
+    padding: 50px;
+    margin-left: 450px;
+    background-image: url('./assets/images/orange_characters_bg.png');
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: left -10px center;
+}
+
+@media (max-width: 1120px) {
+    .cloud-title h3 {
+        text-align: center; 
+        margin-left: 0; 
+        background-position: center; 
+    }
+
+    .swiper-slide {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
